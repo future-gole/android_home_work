@@ -20,6 +20,11 @@
         <activity android:name=".ExperimentThreeActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ContextActionActivity" />
+        <activity android:name=".ExperimentTwoActivity" />
+        <activity android:name=".LinearLayoutActivity" />
+        <activity android:name=".TableLayoutActivity" />
+        <activity android:name=".ConstraintLayout1Activity" />
+        <activity android:name=".ConstraintLayout2Activity" />
 
     </application>
 

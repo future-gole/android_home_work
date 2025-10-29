@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top Navigation Bar -->
+    <ImageView
+        android:id="@+id/iv_space_station"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/space_station_icon"
+        android:contentDescription="Space Stations"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_flights" />
+
+    <TextView
+        android:id="@+id/tv_space_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Space Stations"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_space_station"
+        app:layout_constraintStart_toStartOf="@id/iv_space_station"
+        app:layout_constraintEnd_toEndOf="@id/iv_space_station" />
+
+    <ImageView
+        android:id="@+id/iv_flights"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/rocket_icon"
+        android:contentDescription="Flights"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_flights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flights"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_flights"
+        app:layout_constraintStart_toStartOf="@id/iv_flights"
+        app:layout_constraintEnd_toEndOf="@id/iv_flights" />
+
+    <ImageView
+        android:id="@+id/iv_rovers"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/rover_icon"
+        android:contentDescription="Rovers"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_flights"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rovers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rovers"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_rovers"
+        app:layout_constraintStart_toStartOf="@id/iv_rovers"
+        app:layout_constraintEnd_toEndOf="@id/iv_rovers" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_space_station"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/tv_dca"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        android:background="#2E7D32"
+        android:gravity="center"
+        android:text="DCA"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tv_mars"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
+        android:background="#2E7D32"
+        android:gravity="center"
+        android:text="MARS"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <ImageView
+        android:id="@+id/iv_arrows"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Arrows"
+        android:elevation="4dp"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintBottom_toBottomOf="@id/tv_dca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_dca"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_one_way"
+        android:layout_width="194dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="#D84315"
+        android:checked="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="ONE WAY"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dca" />
+
+    <Button
+        android:id="@+id/btn_traveller"
+        android:layout_width="153dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#D84315"
+        android:text="1 Traveller"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_one_way" />
+
+    <ImageView
+        android:id="@+id/iv_astronaut"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/galaxy"
+        app:layout_constraintStart_toEndOf="@id/iv_rover_small"
+        app:layout_constraintTop_toBottomOf="@id/btn_traveller" />
+
+    <ImageView
+        android:id="@+id/iv_rover_small"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Rover"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_traveller" />
+
+    <ImageView
+        android:id="@+id/iv_rocket_large"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/rocket_icon"
+        android:contentDescription="Rocket"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_depart"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="DEPART"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2E7D32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,44 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+    根布局使用 ConstraintLayout，它非常灵活，
+    可以轻松地将 Toolbar 放在顶部，并将内容区域放在其下方。
+    这等同于 Compose 中的 Scaffold 结构。
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="0.5dp" />
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="课程实验" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:gravity="center_horizontal|top"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout">
 
         <Button
-            android:id="@+id/btnShowDialog"
+            android:id="@+id/btn_experiment_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="显示对话框" />
+            android:layout_marginTop="24dp"
+            android:text="实验二" />
 
         <Button
-            android:id="@+id/btnOpenMenu"
+            android:id="@+id/btn_experiment_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="打开菜单示例"
-            android:layout_marginTop="8dp" />
-
-        <Button
-            android:id="@+id/btnOpenContextMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="打开上下文菜单"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="24dp"
+            android:text="实验三" />
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

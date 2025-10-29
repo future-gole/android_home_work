@@ -35,7 +35,8 @@ android {
         jvmTarget = "17"
     }
     buildFeatures {
-        compose = true
+//        compose = true
+        viewBinding = true
     }
 }
 
@@ -53,6 +54,10 @@ dependencies {
 //    implementation(libs.material)
 //    implementation(libs.androidx.appcompat)
     implementation(libs.androidx.animation)
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

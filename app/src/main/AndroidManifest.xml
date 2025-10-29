@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ExperimentTwoActivity" />
+        <activity android:name=".ExperimentThreeActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".ContextMenuActivity" />
+        <activity android:name=".ContextActionActivity" />
 
     </application>
 
